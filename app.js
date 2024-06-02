@@ -1,42 +1,7 @@
-const role = 'ceo'
+const bmwX3 = 100000;
+const fordFocus = 10000;
+const budget = 30000;
 
-switch (role) {
-    case 'manager':
-        console.log('Менеджер!');
-        break;
-    case 'admin':
-        console.log('Админ!');
-        break;
-    case 'ceo':
-        console.log('CEO!');
-        break;
-    default:
-        console.log('Мы тебя не знаем!');
-}
+let message = budget > bmwX3 ? 'BMW' : budget > fordFocus ? 'Ford' : 'Велосипед';
 
-switch (role) {
-    case 'manager': // role === 'manager'
-    case 'admin':
-        console.log('Nе руководитель!');
-        break;
-    case 'ceo':
-        console.log('Руководитель');
-        break;
-    default:
-        console.log('Мы тебя не знаем!');
-}
-
-
-const num = 1;
-
-switch (true) {
-    case num > 0:
-        console.log('Положительный');
-        break;
-    case num < 0:
-        console.log('Отрицательный');
-        break;
-    default:
-        console.log('Nоль');
-        break;
-}
+console.log(`Я хочу купить ${message}`);
