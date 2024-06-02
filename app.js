@@ -1,7 +1,17 @@
-const bmwX3 = 100000;
-const fordFocus = 10000;
-const budget = 30000;
+const res = prompt('Сколько будет 7 + или - 15?');
 
-let message = budget > bmwX3 ? 'BMW' : budget > fordFocus ? 'Ford' : 'Велосипед';
+// console.log(Number(message) === -8 ? 'Успех'
+//     : Number(message) === 22 ? 'Успех'
+//         : message === 'Я не робот' ? 'Успех'
+//             : 'Вы робот!');
 
-console.log(`Я хочу купить ${message}`);
+switch (true) {
+    case res === 'Я не робот': /* || Number(res) === 22 || Number(res) === -8: */
+    case Number(res) === 22:
+    case Number(res) === -8:
+        console.log('Успех');
+        break;
+    default:
+        console.log('Вы робот!');
+        break;
+}
