@@ -1,32 +1,13 @@
-const tasks = ['Задача 1'];
+const userData = ['Антон', 18, 'Москва'];
 
-function addTask(task) {
-    tasks.push(task);
+function getData() {
+    return ['Антон', 18, 'Москва'];
 }
 
-const delByName = function (task) {
-    const index = tasks.indexOf(task);
-    if (index === -1) {
-        return;
-    }
-    return tasks.splice(index, 1);
-}
+// const userName = getData()[0];
+// const age = getData()[1];
+// const city = getData()[2];
 
-const shiftToTop = task => {
-    const result = delByName(task);
-    if (!result) {
-        return;
-    }
-    tasks.unshift(result[0]);
-}
+const [userName, _, city] = userData;
 
-addTask('Задача 2');
-addTask('Задача 3');
-console.log(tasks);
-
-delByName('Задача 2');
-console.log(tasks);
-
-shiftToTop('Задача 3');
-console.log(tasks);
-
+console.log(userName, city);
