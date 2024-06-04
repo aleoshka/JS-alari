@@ -9,26 +9,24 @@ const delByName = function (task) {
     if (index === -1) {
         return;
     }
-    tasks.splice(index, 1);
+    return tasks.splice(index, 1);
 }
 
 const shiftToTop = task => {
-    const index = tasks.indexOf(task);
-    if (index === -1) {
+    const result = delByName(task);
+    if (!result) {
         return;
     }
-    const oldTask = tasks[index];
-    tasks.splice(index, 1);
-    tasks.unshift(oldTask);
-};
+    tasks.unshift(result[0]);
+}
 
 addTask('Задача 2');
 addTask('Задача 3');
 console.log(tasks);
 
-delByName('Задача 4');
+delByName('Задача 2');
 console.log(tasks);
 
-shiftToTop('Задача 4');
+shiftToTop('Задача 3');
 console.log(tasks);
 
