@@ -1,7 +1,34 @@
-const roles = ['user', 'admin', 'manager', 'superuser'];
+const tasks = ['Задача 1'];
 
-const url = 'auth/user/login';
-const res = url.split('/');
-console.log(res);
+function addTask(task) {
+    tasks.push(task);
+}
 
-console.log(roles.join('-'));
+const delByName = function (task) {
+    const index = tasks.indexOf(task);
+    if (index === -1) {
+        return;
+    }
+    tasks.splice(index, 1);
+}
+
+const shiftToTop = task => {
+    const index = tasks.indexOf(task);
+    if (index === -1) {
+        return;
+    }
+    const oldTask = tasks[index];
+    tasks.splice(index, 1);
+    tasks.unshift(oldTask);
+};
+
+addTask('Задача 2');
+addTask('Задача 3');
+console.log(tasks);
+
+delByName('Задача 4');
+console.log(tasks);
+
+shiftToTop('Задача 4');
+console.log(tasks);
+
