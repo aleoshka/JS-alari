@@ -1,15 +1,10 @@
-const tasks = ['Задача 1', 'Задача 2', 'Задача 3'];
+const arr = ['!', 'JS', 'люблю', 'Я'];
+let newArr = [];
 
-for (let i = 0; i < tasks.length; i++) {
-    if (tasks[i] === 'Задача 2') {
-        continue;
-    }
-    console.log(tasks[i]);
+for (let i = arr.length - 1; i >= 0; i--) {
+    newArr.push(arr[i]);
 }
-console.log('--------');
-for (let i = 0; i < tasks.length; i++) {
-    if (tasks[i] === 'Задача 2') {
-        break;
-    }
-    console.log(tasks[i]);
-}
+
+console.log(newArr.join(' '));
+
+console.log(arr.reverse().join(' '));
