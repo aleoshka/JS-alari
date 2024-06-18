@@ -1,23 +1,17 @@
-const operations = [100, -20, 7, -30, 50];
+/* 
+    Найти среднее значение последовательность
+    числе с помощью reduce
+*/
+const arr = [2, 4, 4, 10];
 
-// let balance = 0;
-// for (const operation of operations) {
-//     balance += operation;
-// }
-
-const finalBalance = operations.reduce((acc, operation, i) => {
-    console.log(`Итерация ${i}, acc: ${acc}, operation ${operation}`);
-    return acc += operation;
-}, 0);
-
-console.log(finalBalance);
-
-const minElement = operations.reduce((acc, operation) => {
-    if (operation > acc) {
-        return acc;
+const avg = arr.reduce((acc, el, i) => {
+    if (i != arr.length - 1) {
+        return acc + el;
     } else {
-        return operation;
+        return (acc + el) / arr.length;
     }
 }, 0);
 
-console.log(minElement);
+// const avg = arr.reduce((acc, el) => acc + el) / arr.length
+
+console.log(avg);
