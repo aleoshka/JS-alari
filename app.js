@@ -1,59 +1,9 @@
-/* проверить является ли это номером телефона России */
-/* верные */
-const num1 = '89103235356';
-const num2 = '+79103235356';
-const num3 = '+7(910)3235356';
-const num4 = '+7(910) 323-53-56';
-const num5 = '  +7(910) 323-53-56  ';
-/* не верные */
-const num1Error = '89103235';
-const num2Error = '+7d910d323-53-56';
-const num3Error = '9+7103235356';
-const num4Error = '89103g35356';
+const userFullName = 'Вася Пупкин Васильевич';
+console.log(userFullName.split(' '));
+const [firstName, familyName, lastName] = userFullName.split(' ');
+console.log(firstName);
+console.log(familyName);
+console.log(lastName);
 
-// function isPhoneNumber(num) {
-//     num = num.trim();
-//     num = num.replace('+7', '8');
-//     if (!num.startsWith('8')) {
-//         return false;
-//     }
-//     num = num.replaceAll('(', '');
-//     num = num.replaceAll(')', '');
-//     num = num.replaceAll(' ', '');
-//     num = num.replaceAll('-', '');
-//     if (num.length != 11) {
-//         return false;
-//     }
-//     let onlyNumber = true;
-//     for (const char of num) {
-//         if (isNaN(Number(char))) {
-//             onlyNumber = false;
-//             break;
-//         }
-//     }
-//     return onlyNumber;
-// }
-
-function isValid(num) {
-    // num = num.trim();
-    if (num.startsWith('8')) {
-        num = num.replace('8', '+7');
-    }
-    for (el of num) {
-        if (' )(-'.includes(el)) {
-            num = num.replace(el, '');
-        }
-    }
-    return !isNaN(num) && num.length === 12 && num.startsWith('+')
-}
-
-console.log(isValid(num1));
-console.log(isValid(num2));
-console.log(isValid(num3));
-console.log(isValid(num4));
-console.log(isValid(num5));
-
-console.log(isValid(num1Error));
-console.log(isValid(num2Error));
-console.log(isValid(num3Error));
-console.log(isValid(num4Error));
+const arr = ['Ты', 'знаешь', 'JS'];
+console.log(arr.join(' '));
