@@ -1,28 +1,17 @@
-// const arr = [1, 3, 4];
-// const [z, x, y] = arr;
-// console.log(y);
+const cities = {
+    msk: {
+        temp: {
+            celcius: 25
+        }
+    },
+    spb: {
 
-let user = {
-    name: 'Вася',
-    age: 30,
-    city: 'Москва'
+    }
 };
 
-const { age, ...userWithoutAge } = user;
-console.log(age);
-console.log(userWithoutAge);
+const city = 'krd';
+if (cities[city] /* != undefined */ && cities[city].temp /* != undefined */) {
+    console.log(cities[city].temp.celcius);
+}
 
-const additionalData = {
-    skills: ['Разработка', 'Дизайн'],
-    creditCard: '2344-4141-4312-5321'
-};
-user.test = 'sfds';
-
-// user.skills = additionalData.skills;
-// user.creditCard = additionalData.creditCard;
-
-// user = {
-//     ...user,
-//     ...additionalData
-// };
-console.log(user);
+console.log(cities[city]?.temp?.celcius);
