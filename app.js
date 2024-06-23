@@ -1,15 +1,13 @@
-const sum = 1;
-console.log('start');
-console.log(sum);
+let fitstName = 'Anton';
+let fitstName2 = fitstName;
+fitstName = 'New';
+console.log(fitstName);
+console.log(fitstName2);
 
-function add5(n) {
-    n = n + 5;
-    if (n > 100) {
-        return n;
-    }
-    console.log(n);
-    return add5(n);
-}
-
-add5(sum)
-console.log('ended');
+const user = {
+    name: 'Anton'
+};
+const user2 = user;
+user2.name = 'New';
+console.log(user);
+console.log(user2);
