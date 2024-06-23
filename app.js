@@ -1,13 +1,18 @@
-let fitstName = 'Anton';
-let fitstName2 = fitstName;
-fitstName = 'New';
-console.log(fitstName);
-console.log(fitstName2);
-
 const user = {
-    name: 'Anton'
+    name: 'Anton',
+    id: 1,
+    roles: ['Admin']
 };
-const user2 = user;
-user2.name = 'New';
+
+// const newUser = Object.assign({}, user);
+// user.name = 'NewUser';
+// console.log(user);
+// console.log(newUser);
+
+const newUser2 = {
+    ...user
+};
+newUser2.name = 'NewUser';
+newUser2.roles.push('User');
 console.log(user);
-console.log(user2);
+console.log(newUser2);
