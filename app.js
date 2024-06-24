@@ -1,27 +1,15 @@
-'use strict';
+addUser();
+console.log(b);
+let a = 1;
+var b = 3;
+console.log(a);
 
-let succesMessage = 'Успех';
-const user = {
-    name: 'Вася',
-    roles: []
-};
-
-function addRole(user, role) {
-    if (role == 'admin') {
-        const message = 'Ошибка';
-        console.log(message);
-        return user;
-    }
-    user.roles.push(role);
-    let succesMessage = 'Ура';
-    console.log(succesMessage);
-
-    function logRoles() {
-        console.log(user.roles);
-    }
-    logRoles();
-    return user;
+function addUser() {
+    // console.log('User added');
 }
 
-console.log(addRole(user, 'dev'));
-console.log(succesMessage);
+arr1();
+let arr1 = () => console.log('arr1');
+
+
+addUser();
