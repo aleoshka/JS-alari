@@ -1,23 +1,14 @@
 'use strict';
-/*
-    Создайте объект пользователя с паролем.
-    С помощью функции ниже удалить пароль сделав
-    функцию сброса пароля
- */
+// IIFE
 
-function removePassword(reset) {
-    if (reset) {
-        this.password = undefined;
-    } else {
-        this.password = '1';
-    }
+function init() {
+    console.log('start');
 }
+init();
 
-const user = {
-    login: 'asf@.com',
-    password: '12345'
-}
+(function () {
+    console.log('start IIFE');
+    const a = 1;
+})();
 
-const resetUserPassword = removePassword.bind(user, true);
-resetUserPassword();
-console.log(user);
+console.log(a);
