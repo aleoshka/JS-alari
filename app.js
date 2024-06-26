@@ -1,22 +1,34 @@
 'use strict';
 
-function changeBalance() {
-    let balance = 0;
-    let key = 'asd';
-    return function (sum) {
-        balance += sum;
-        key = 'asda';
-        console.log(`Баланс: ${balance}`);
+/* 
+    Сделать функцию пользовтеля, которая берёт за основу
+    userInfo и за счёт замыкания создаёт новый объект, с
+    котором можно работать как user1().increse(100)
+*/
+
+const userInfo = {
+    balance: 0,
+    operations: 0,
+    increase(sum) {
+        this.balance += sum;
+        this.operations++;
     }
 }
 
-const change = changeBalance();
-change(100);
-change(-50);
-change(200);
-console.dir(change);
+function user() {
+    const userObj = {
+        ...userInfo
+    }
+    return function () {
+        return userObj;
+    }
+}
 
-const change2 = changeBalance();
-change2(100);
-console.dir(change2);
+const user1 = user();
+user1().increase(100);
+user1().increase(100);
+console.log(user1());
 
+const user2 = user();
+user2().increase(100);
+console.log(user2());
