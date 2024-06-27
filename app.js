@@ -1,11 +1,19 @@
 'use strict';
 
-// addEventListener('load', () => {
-//     console.log(document.head);
-// })
+// document.querySelector('.button').addEventListener('click', function() {
+// 	const input = document.querySelector('.input').value;
+// 	if (!input) {
+// 		return;
+// 	}
+// 	document.querySelector('.panel').innerText = input;
+// 	document.querySelector('.input').value = '';
+// });
 
-const panelText = document.querySelector('.panel').innerText;
-console.log(panelText);
-document.querySelector('.panel').innerText = 'New text';
-document.querySelector('.input').value = 'Text';
-
+function changeClick() {
+    const input = document.querySelector('.input').value;
+    if (!input) {
+        return;
+    }
+    document.querySelector('.panel').innerText = input;
+    document.querySelector('.input').value = '';
+}
