@@ -1,34 +1,11 @@
 'use strict';
 
-/* 
-    Сделать функцию пользовтеля, которая берёт за основу
-    userInfo и за счёт замыкания создаёт новый объект, с
-    котором можно работать как user1().increse(100)
-*/
+// addEventListener('load', () => {
+//     console.log(document.head);
+// })
 
-const userInfo = {
-    balance: 0,
-    operations: 0,
-    increase(sum) {
-        this.balance += sum;
-        this.operations++;
-    }
-}
+const panelText = document.querySelector('.panel').innerText;
+console.log(panelText);
+document.querySelector('.panel').innerText = 'New text';
+document.querySelector('.input').value = 'Text';
 
-function user() {
-    const userObj = {
-        ...userInfo
-    }
-    return function () {
-        return userObj;
-    }
-}
-
-const user1 = user();
-user1().increase(100);
-user1().increase(100);
-console.log(user1());
-
-const user2 = user();
-user2().increase(100);
-console.log(user2());
