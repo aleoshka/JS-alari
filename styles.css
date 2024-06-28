@@ -7,6 +7,21 @@
     margin-bottom: 20px;
 }
 
+.notification {
+    font-size: 18px;
+    color: white;
+    margin: 20px;
+    /* display: none; */
+}
+
+/* .notification_active {
+    display: block;
+} */
+
+.notification_hidden {
+    display: none;
+}
+
 .button {
     display: inline-flex;
     align-items: center;
