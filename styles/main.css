@@ -4,13 +4,17 @@
 
 body {
     font-family: "Comfortaa", cursive;
-    margin: 0;
+    margin: auto;
     background-color: #eee9fa;
+    font-size: 400;
 }
 
 .app {
     display: flex;
+    /* justify-content: center; */
 }
+
+/* panel */
 
 .logo {
     margin-bottom: 50px;
@@ -62,11 +66,121 @@ body {
     width: 45px;
     height: 45px;
     box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
-    border: none;
+    border: 1px solid #CAD5FF;
     border-radius: 14px;
     cursor: pointer;
 }
 
 .menu__add:hover {
-    background: #eee9fa
+    background: #c8c1d6
+}
+
+.menu__add:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* content-footer */
+
+.content {
+    min-width: 900px;
+    padding: 45px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 33px;
+    color: #000000;
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 235px;
+}
+
+.progress__text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress__name {
+    font-size: 14px;
+    line-height: 16px;
+    color: #232360;
+}
+
+.progress__percent {
+    font-size: 12px;
+    line-height: 13px;
+    color: #768396;
+}
+
+.progress__bar {
+    width: 100%;
+    background: #e2e2ec;
+    height: 5px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.progress__cover-bar {
+    width: 80%;
+    background: #5051F9;
+    height: 5px;
+    border-radius: 4px;
+    position: absolute;
+}
+
+/* content-main */
+
+main {
+    margin-top: 30px;
+}
+
+.habbit {
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.habbit__day {
+    background: #fceefb;
+    padding: 20px 40px;
+    border-radius: 10px 0 0 10px;
+    border-right: 1px solid #E7EBFB;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.habbit__comment {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 20px 25px;
+}
+
+.habbit__delete {
+    margin-left: auto;
+    margin-right: 13px;
+    background: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.habbit__delete:hover {
+    background: #c8c1d6
+}
+
+.habbit__delete:hover img {
+    filter: brightness(0) invert(1);
 }
