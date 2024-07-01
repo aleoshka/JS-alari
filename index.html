@@ -2,21 +2,42 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habbit App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css" />
 </head>
 
-<body style="background-color: #1c1b21; text-align: center">
-  <img src="./logo.svg" alt="" />
-  <div class="panel">I love this!</div>
-  <input class="input" onkeydown="inputChanged(event)" />
-  <button class="button" onclick="submitForm()">Change</button>
-  <div class="notification notification_hidden">Changed!</div>
-  <div class="test"></div>
-  <script src="./app.js"></script>
+<body>
+    <div class="app">
+        <div class="panel">
+            <img class="logo" src="images/logo.svg" alt="Логотоип Habbit App">
+            <nav class="menu">
+                <div class="menu__list">
+                    <button class="menu__item menu__item_active">
+                        <img src="images/dumbbell.svg" alt="">
+                    </button>
+                    <button class="menu__item">
+                        <img src="images/water.svg" alt="">
+                    </button>
+                    <button class="menu__item">
+                        <img src="images/food.svg" alt="">
+                    </button>
+                </div>
+                <button class="menu__add">
+                    <img src="images/add.svg" alt="Добавить">
+                </button>
+            </nav>
+        </div>
+        <div class="content">
+            собачья дыра
+        </div>
+    </div>
+    <script src="scripts/app.js"></script>
 </body>
 
 </html>
