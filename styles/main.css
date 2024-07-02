@@ -5,25 +5,24 @@
 body {
     font-family: "Comfortaa", cursive;
     margin: auto;
-    background-color: #eee9fa;
+    background-color: #F3F6FD;
     font-size: 400;
 }
 
 .app {
     display: flex;
-    /* justify-content: center; */
 }
 
 /* panel */
 
-.logo {
-    margin-bottom: 50px;
+.panel {
+    height: 100vh;
+    background: #FBFAFF;
+    padding: 30px;
 }
 
-.panel {
-    background: #e7ecfa;
-    min-height: 100vh;
-    padding: 30px;
+.logo {
+    margin-bottom: 48px;
 }
 
 .menu {
@@ -40,12 +39,12 @@ body {
 }
 
 .menu__item {
-    background: #FFFFFF;
     width: 45px;
     height: 45px;
-    box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+    background: #FFFFFF;
     border: none;
     border-radius: 14px;
+    box-shadow: 0 8px 14px 0 rgba(62, 107, 224, 0.12);
     cursor: pointer;
 }
 
@@ -61,48 +60,51 @@ body {
     background: #5051F9;
 }
 
+.menu__item_active img {
+    filter: brightness(0) invert(1);
+}
+
 .menu__add {
-    background: none;
     width: 45px;
     height: 45px;
-    box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+    background: none;
     border: 1px solid #CAD5FF;
     border-radius: 14px;
     cursor: pointer;
 }
 
 .menu__add:hover {
-    background: #c8c1d6
+    background: #6A6AFB;
 }
 
 .menu__add:hover img {
     filter: brightness(0) invert(1);
 }
 
-/* content-header */
+/* content > header */
 
 .content {
+    padding: 45px 50px;
     min-width: 900px;
-    padding: 45px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 h1 {
     margin: 0;
-    font-size: 30px;
-    line-height: 33px;
     color: #000000;
+    line-height: 33px;
 }
 
 .progress {
+    min-width: 235px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    min-width: 235px;
 }
 
 .progress__text {
@@ -111,23 +113,21 @@ h1 {
 }
 
 .progress__name {
-    font-size: 14px;
-    line-height: 16px;
     color: #232360;
+    font-size: 14px;
+    line-height: 15px;
 }
 
 .progress__percent {
+    color: #768396;
     font-size: 12px;
     line-height: 13px;
-    color: #768396;
 }
 
 .progress__bar {
-    width: 100%;
-    background: #e2e2ec;
+    background: #E6E9ED;
     height: 5px;
     border-radius: 4px;
-    position: relative;
 }
 
 .progress__cover-bar {
@@ -135,52 +135,50 @@ h1 {
     background: #5051F9;
     height: 5px;
     border-radius: 4px;
-    position: absolute;
 }
 
-/* content-main */
-
-main {
-    margin-top: 30px;
-}
+/* content > main */
 
 .habbit {
     background: #FFFFFF;
-    border-radius: 10px;
     display: flex;
+    border-radius: 10px;
+    max-height: 55px;
+    font-size: 500;
     align-items: center;
     margin-bottom: 12px;
 }
 
 .habbit__day {
+    color: #000000;
     background: #FBFAFF;
+    font-size: 14px;
+    line-height: 15px;
     padding: 20px 40px;
     border-radius: 10px 0 0 10px;
     border-right: 1px solid #E7EBFB;
-    font-size: 14px;
-    line-height: 16px;
-    color: #000000;
     min-width: 150px;
 }
 
 .habbit__comment {
+    min-width: 340px;
+    padding: 19px 38px 19px 43px;
     font-size: 16px;
-    line-height: 18px;
-    padding: 20px 25px;
+    line-height: 17px;
 }
 
 .habbit__delete {
     margin-left: auto;
     margin-right: 13px;
     background: none;
-    cursor: pointer;
     border: none;
     border-radius: 5px;
     padding: 5px 5px 2px 5px;
+    cursor: pointer;
 }
 
 .habbit__delete:hover {
-    background: #c8c1d6
+    background: #c2c2d4;
 }
 
 .habbit__delete:hover img {
@@ -188,52 +186,39 @@ main {
 }
 
 input {
-    background: #FFFFFF;
+    font-size: 14px;
+    line-height: 15px;
     border: 1px solid #E7EBFB;
     border-radius: 9px;
-    padding: 12px 20px;
+    padding: 12px 48px;
     font-family: "Comfortaa", cursive;
     flex: 1;
-    font-size: 14px;
-    line-height: 16px;
-}
-
-input::placeholder {
-    color: #8899A8;
 }
 
 .habbit__form {
-    display: flex;
-    gap: 15px;
     width: 100%;
-    padding: 7px 13px 7px 25px;
+    display: flex;
+    padding: 7px 13px 7px 24px;
+    gap: 14px;
     position: relative;
 }
 
-
-.input_icon {
-    padding-left: 45px;
-}
-
-.input__icon {
+.icon {
     position: absolute;
-    top: 18px;
-    left: 45px
+    top: 17px;
+    left: 45px;
 }
 
-.button {
+.done {
+    min-width: 120px;
     background: #EDECFE;
     color: #5051F9;
     border: none;
     border-radius: 9px;
-    font-size: 13px;
-    line-height: 14px;
-    min-width: 120px;
-    padding: 14px 30px;
     cursor: pointer;
 }
 
-.button:hover {
+.done:hover {
     background: #6A6AFB;
     color: #FFFFFF;
 }
